@@ -1,0 +1,14 @@
+DOT=$HOME/dotfiles
+source $DOT/zsh/.omz
+
+export SHELL=zsh
+export EDITOR=subl
+DEFAULT_USER="davidconner"
+plugins=(git rvm rails3 brew gem rbates)
+
+[[ -s "$DOT/zsh/.aliases" ]] && source $DOT/zsh/.aliases
+[[ -s "$DOT/zsh/.bindkeys" ]] && source $DOT/zsh/.bindkeys
+[[ -s "$DOT/zsh/.functions" ]] && source $DOT/zsh/.functions
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
