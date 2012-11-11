@@ -1,0 +1,2 @@
+#saves iterm profiles
+alias save-iterm="cp Library/Preferences/com.googlecode.iterm2.plist ~/dotfiles/iterm/"
