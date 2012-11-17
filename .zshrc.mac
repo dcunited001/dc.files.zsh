@@ -1,5 +1,5 @@
 #!/bin/zsh
- 
+
 DOT=$HOME/.files
 source $HOME/.zsh/.omz
 
@@ -7,6 +7,8 @@ export SHELL=zsh
 export EDITOR=subl
 export DEFAULT_USER="davidconner"
 plugins=(git rvm rails3 brew gem rbates)
+
+unsetopt correct_all #disable autocorrect
 
 [[ -s "$HOME/.zsh/.aliases" ]] && source $HOME/.zsh/.aliases
 [[ -s "$HOME/.zsh/.bindkeys" ]] && source $HOME/.zsh/.bindkeys
