@@ -1,5 +1,3 @@
-#!/bin/zsh
-
 #refresh profiles
 alias sbash='source ~/.bashrc'
 alias sbashp='source ~/.bash_profile'
@@ -13,16 +11,23 @@ alias vzsh='vim ~/zshrc'
 #ls aliases
 alias la='ls -al'
 alias ll='ls -l'
+alias lsym='ll | grep -e -\>'
+alias lasym='la | grep -e -\>'
+#alias lah=only hidden
+#alias lahl=only hidden details
 
 #git aliases
 alias gpom='git push origin master'
 alias gpum='git pull origin master'
 alias gsas='git status'
+alias gsta='git status'
 alias gad='git add'
 alias gcom='git commit -m'
 alias gch='git checkout'
 alias gchb='git checkout -b'
 alias gbl='git branch'
+alias gdf='git diff'
+alias gdif='git diff'
 
 #misc
 alias df='df -h' #show remaining space in megs
