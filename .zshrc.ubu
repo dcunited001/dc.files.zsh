@@ -1,2 +1,15 @@
 #!/bin/zsh
- 
+
+export OS_TYPE=ubu
+export DOTFILES=$HOME/.files
+source $HOME/.zsh/.omz
+
+export SHELL=zsh
+export EDITOR=subl
+export DEFAULT_USER="davidconner"
+plugins=(git rvm rails3 brew gem rbates)
+
+#source aliases,functions,etc?  or load these in zshrc.all?
+
+#load common zsh
+[[ -e "$DOTFILES/zsh/.zshrc.all" ]] && source $DOTFILES/zsh/.zshrc.all
