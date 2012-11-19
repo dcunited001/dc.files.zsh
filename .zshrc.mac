@@ -20,3 +20,6 @@ unsetopt correct_all #disable autocorrect
 
 #switch to gnu-getopt
 export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"
+
+#load common zsh
+[[ -e "$DOTFILES/zsh/.zshrc.all" ]] && source $DOTFILES/zsh/.zshrc.all
