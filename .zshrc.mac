@@ -1,6 +1,7 @@
 #!/bin/zsh
 
-DOT=$HOME/.files
+export OS_TYPE=mac
+export DOTFILES=$HOME/.files
 source $HOME/.zsh/.omz
 
 export SHELL=zsh
@@ -10,7 +11,7 @@ plugins=(git rvm rails3 brew gem rbates)
 
 unsetopt correct_all #disable autocorrect
 
-[[ -s "$HOME/.zsh/.aliases" ]] && source $HOME/.zsh/.aliases
+[[ -e "$DOTFILES/alias/alias.$OS_TYPE" ]] && source $DOTFILES/alias/alias.$OS_TYPE
 [[ -s "$HOME/.zsh/.bindkeys" ]] && source $HOME/.zsh/.bindkeys
 [[ -s "$HOME/.zsh/.functions" ]] && source $HOME/.zsh/.functions
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
