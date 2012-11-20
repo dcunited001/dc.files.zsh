@@ -2,15 +2,13 @@
 
 export OS_TYPE=mac
 export DOTFILES=$HOME/.files
-source $HOME/.zsh/.omz
 
 export SHELL=zsh
 export EDITOR=subl
 export DEFAULT_USER="davidconner"
-plugins=(git rvm rails3 brew gem rbates)
 
 #switch to gnu-getopt
 export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"
 
 #load common zsh
-[[ -e "$DOTFILES/zsh/.zshrc.all" ]] && source $DOTFILES/zsh/.zshrc.all
+[[ -e "$DOTFILES/zsh/zshrc" ]] && source $DOTFILES/zsh/zshrc
