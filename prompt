@@ -1,0 +1,17 @@
+#! /bin/zsh
+#PROMPT='%{%f%b%k%}$(build_prompt) '
+#PROMPT='$(build_prompt) '
+
+#=[ ZSH Prompts ]=#
+#   %d           Your current working directory relative to /home/
+#   %~           Your current working directory relative to /home/member/u/username
+#   %M           server name - prodigy.redbrick.dcu.ie
+#   %m           The part of the hostname up to the first . - prodigy
+#   %n           Your Login Name
+#   %T           System time in HH:mm format
+#   %*           System time in HH:mm:ss format
+#   %D           Today's Date in YY-MM-DD
+#   %l           Your current tty e.g. pts/100
+#   %B....%b     Begin and end bold print
+#   %U....%u     Begin and end underlined print
+
