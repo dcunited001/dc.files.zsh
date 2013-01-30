@@ -5,10 +5,14 @@ export DOTFILES=$HOME/.files
 
 export SHELL=zsh
 export EDITOR=subl
-export DEFAULT_USER="davidconner"
+export DEFAULT_USER="dc"
 
 #switch to gnu-getopt
 export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"
 
 #load common zsh
 [[ -e "$DOTFILES/zsh/zshrc" ]] && source $DOTFILES/zsh/zshrc
+
+# add SML path
+export PATH=$PATH:$HOME/dev/src/smlnj/bin
+
