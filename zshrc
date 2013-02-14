@@ -9,5 +9,6 @@ source $HOME/.zsh/omz
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+for f in $HOME/.zsh/.etc/*; do; source $f; done;
 
 unsetopt correct_all #disable autocorrect
