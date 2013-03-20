@@ -15,3 +15,10 @@ export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"
 
 # add SML path
 export PATH=$PATH:$HOME/dev/src/smlnj/bin
+
+#android sdk
+export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
+
+#node npm bins
+export NPM_GLOBAL=/usr/local/share/npm/bin
+PATH=$PATH:$NPM_GLOBAL
