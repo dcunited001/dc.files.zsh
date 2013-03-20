@@ -4,7 +4,7 @@ export OS_TYPE=mac
 export DOTFILES=$HOME/.files
 
 export SHELL=zsh
-export EDITOR=subl
+export EDITOR=vim
 export DEFAULT_USER="dc"
 
 #switch to gnu-getopt
