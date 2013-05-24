@@ -21,6 +21,7 @@ export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
 
 #node npm bins
 export NPM_GLOBAL=/usr/local/share/npm/bin
-PATH=$PATH:$NPM_GLOBAL
+export VAGRANT_PATH=/Applications/Vagrant/bin
+PATH=$VAGRANT_PATH:$PATH:$NPM_GLOBAL
 
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
