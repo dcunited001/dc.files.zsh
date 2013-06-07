@@ -1,0 +1,9 @@
+
+export OS_TYPE=n7
+export DOTFILES=$HOME/.files
+
+export SHELL=zsh
+export EDITOR=vim
+export DEFAULT_USER=dc
+export HOME=/data/usr/dc
+
