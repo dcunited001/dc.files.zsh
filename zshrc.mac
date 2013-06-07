@@ -17,11 +17,11 @@ export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"
 export PATH=$PATH:$HOME/dev/src/smlnj/bin
 
 #android sdk
-export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
+export ANDROID_SDK_ROOT=$HOME/dev/android/adt-bundle/sdk
 
 #node npm bins
 export NPM_GLOBAL=/usr/local/share/npm/bin
 export VAGRANT_PATH=/Applications/Vagrant/bin
-PATH=$VAGRANT_PATH:$PATH:$NPM_GLOBAL
+PATH=$VAGRANT_PATH:$PATH:$NPM_GLOBAL:$ANDROID_SDK_ROOT/platform-tools
 
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
