@@ -1,0 +1,32 @@
+* ZSH Todo
+
+** Move functions and aliases to topic files
+*** git/emacs/etc
+*** then move these topic files to their repos?
+
+** Tags in Git for each platform?
+*** converge zshrc.mac, zshrc.ubu, zshrc.n7, etc
+
+* Nexus 7 Todo
+
+** Installing .files onto Nexus 7
+*** init scripts
+
+** ZSH
+*** install zsh
+*** set as default shell
+*** finish n7 scripts (zlogin, zlogout, zshenv, zprofile, zshrc)
+
+
+** JGit
+*** install maven
+*** build jgit
+
+** Clojure
+*** http://nightweb.net/blog/clojure-on-android.html
+
+** Emacs
+*** setup OS_TYPE env vars & functions in zshrc.n7
+*** setup env conditionals for OS_TYPE (cl-case http://www.gnu.org/software/emacs/manual/html_node/cl/Conditionals.html)
+
+** GCC
