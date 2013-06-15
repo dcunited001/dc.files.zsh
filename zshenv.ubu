@@ -12,9 +12,7 @@
 # #
 # # Global Order: zshenv, zprofile, zshrc, zlogin
 
-echo $HOME
 export ZDOTDIR=$HOME/.zsh
-
 if [[ -z "$PATH" || "$PATH" == "/bin:/usr/bin" ]]; then
   export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games"
 fi
