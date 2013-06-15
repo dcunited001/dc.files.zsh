@@ -13,3 +13,5 @@ export DEFAULT_USER="dc"
 #export ANDROID_SDK_ROOT ??
 #export NPM_GLOBAL ??
 #export VAGRANT_PATH ??
+
+alias em="emacs -nw"
