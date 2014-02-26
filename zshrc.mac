@@ -25,3 +25,7 @@ export VAGRANT_PATH=/Applications/Vagrant/bin
 PATH=$VAGRANT_PATH:$PATH:$NPM_GLOBAL:$ANDROID_SDK_ROOT/platform-tools
 
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+
+#rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
