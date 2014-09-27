@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # git plugin breaks when upgrading oh-my-zsh (so does agnoster theme)
-plugins=(git rails brew gem rbates lein tmux tmuxinator vagrant)
+plugins=(git tmux rails brew gem rbates lein tmuxinator vagrant)
 source $HOME/.zsh/omz
 
 [[ -s "$HOME/.zsh/alias" ]] && source $HOME/.zsh/alias
@@ -20,8 +20,9 @@ for f in $HOME/.zsh/.etc/*; do; source $f; done;
 PATH=${PATH}:/usr/local/share/python
 export SITE_PACKAGES=/usr/local/lib/python2.7/site-packages
 
-
 # setup virtualenv
+#TODO: either 1) only execute if virtualenv exists
+#          or 2) notate how to install (refer to http://te.xel.io/ and find the powerline blog)
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
@@ -34,4 +35,5 @@ else
 fi
 
 # powerline
+# TODO: init script to automatically link ~/.config/powerline to ~/.files/powerline
 . $SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh
