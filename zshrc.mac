@@ -20,14 +20,12 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/dev/src/smlnj/bin
 
 #android sdk
-export ANDROID_SDK_ROOT=$HOME/dev/android/adt-bundle/sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 
 #node npm bins
 export NPM_GLOBAL=/usr/local/share/npm/bin
 export VAGRANT_PATH=/Applications/Vagrant/bin
 PATH=$VAGRANT_PATH:$PATH:$NPM_GLOBAL:$ANDROID_SDK_ROOT/platform-tools
-
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 
 #rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
