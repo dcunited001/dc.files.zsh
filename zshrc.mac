@@ -27,6 +27,9 @@ export NPM_GLOBAL=/usr/local/share/npm/bin
 export VAGRANT_PATH=/Applications/Vagrant/bin
 PATH=$VAGRANT_PATH:$PATH:$NPM_GLOBAL:$ANDROID_SDK_ROOT/platform-tools
 
+export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+
 #rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
