@@ -36,3 +36,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # gmake and some compilation tools may override standard osx build tool binaries
 # http://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
