@@ -17,14 +17,13 @@ for f in $HOME/.zsh/.etc/*; do; source $f; done;
 
 # python/pip
 # TODO: move python/pip/etc config to separate file
-PATH=${PATH}:/usr/local/share/python
-export SITE_PACKAGES=/usr/local/lib/python2.7/site-packages
+PATH=${PATH}:/usr/local/share/python # this mysterious location is for 2.7 and not 3.5 =/
 
 # setup virtualenv
 #TODO: either 1) only execute if virtualenv exists
 #          or 2) notate how to install (refer to http://te.xel.io/ and find the powerline blog)
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
@@ -36,4 +35,5 @@ fi
 
 # powerline
 # TODO: init script to automatically link ~/.config/powerline to ~/.files/powerline
+export SITE_PACKAGES=/usr/local/lib/python3.5/site-packages
 . $SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh
