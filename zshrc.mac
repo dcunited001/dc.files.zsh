@@ -19,25 +19,77 @@ export PATH=$PATH:$HOME/bin
 # add SML path
 export PATH=$PATH:$HOME/dev/src/smlnj/bin
 
-#android sdk
+#====================================
+# python
+#====================================
+export THE_PYTHON=/usr/local/bin/python3
+
+# - this mysterious location is for 2.7 and not 3.5 =/
+# - and doesn't appear to be very important.  i wonder what it does...
+# PATH=${PATH}:/usr/local/share/python
+
+#====================================
+# virtualenv
+#====================================
+#TODO: either 1) only execute if virtualenv exists
+#          or 2) notate how to install (refer to http://te.xel.io/ and find the powerline blog)
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=$THE_PYTHON
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+else
+    echo "WARNING: Can't find virtualenvwrapper.sh"
+fi
+
+#====================================
+# powerline (zsh)
+#====================================
+# TODO: init script to automatically link ~/.config/powerline to ~/.files/powerline
+export POWERLINE_PYTHON_VERSION=3.5
+
+# difference b/w site-packages & dist-packages?
+# - is that correct behavior for brew to setup pip to install to site-packages?
+export SITE_PACKAGES=/usr/local/lib/python$POWERLINE_PYTHON_VERSION/site-packages
+. $SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh
+
+#====================================
+# android sdk
+#====================================
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 
-#node npm bins
+#====================================
+# node/npm
+#====================================
 export NPM_GLOBAL=/usr/local/share/npm/bin
+
+#====================================
+# vagrant
+#====================================
 export VAGRANT_PATH=/Applications/Vagrant/bin
 PATH=$VAGRANT_PATH:$PATH:$NPM_GLOBAL:$ANDROID_SDK_ROOT/platform-tools
 
+#====================================
+# java
+#====================================
 export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 
-#rbenv
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+#====================================
+# ruby
+#====================================
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # gmake and some compilation tools may override standard osx build tool binaries
 # http://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
 
-# jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+#====================================
+# misc
+#====================================
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
