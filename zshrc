@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # git plugin breaks when upgrading oh-my-zsh (so does agnoster theme)
-plugins=(git tmux rails brew gem rbates lein tmuxinator vagrant)
+plugins=(git rails brew gem rbates lein vagrant)
 source $HOME/.zsh/omz
 
 [[ -s "$HOME/.zsh/alias" ]] && source $HOME/.zsh/alias
