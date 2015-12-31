@@ -7,7 +7,6 @@ source $HOME/.zsh/omz
 [[ -s "$HOME/.zsh/alias" ]] && source $HOME/.zsh/alias
 [[ -s "$HOME/.zsh/func" ]] && source $HOME/.zsh/func
 [[ -s "$HOME/.zsh/bindkeys" ]] && source $HOME/.zsh/bindkeys
-[[ -s "$HOME/.zsh/functions" ]] && source $HOME/.zsh/functions
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 unsetopt correct_all # disable zsh autocorrect
