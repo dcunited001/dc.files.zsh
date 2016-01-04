@@ -12,5 +12,4 @@ source $HOME/.zsh/omz
 
 unsetopt correct_all # disable zsh autocorrect
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 for f in $HOME/.zsh/.etc/*; do; source $f; done;
