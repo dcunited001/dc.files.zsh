@@ -81,10 +81,11 @@ export PATH="$HOME/.jenv/bin:$PATH"
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 #====================================
-# ruby
+# chruby
 #====================================
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+[[ -e "/usr/local/share/chruby/chruby.sh" ]] && source /usr/local/share/chruby/chruby.sh
+[[ -e "/usr/local/share/chruby/auto.sh" ]] && source /usr/local/share/chruby/auto.sh
 
 # gmake and some compilation tools may override standard osx build tool binaries
 # http://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/

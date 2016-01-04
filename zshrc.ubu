@@ -13,7 +13,14 @@ export PATH=$PATH:$HOME/bin
 [[ -e "$DOTFILES/zsh/zshrc" ]] && source $DOTFILES/zsh/zshrc
 
 #====================================
-# virtualenv (wrapper)
+# chruby
+#====================================
+
+[[ -e "/usr/local/share/chruby/chruby.sh" ]] && source /usr/local/share/chruby/chruby.sh
+[[ -e "/usr/local/share/chruby/auto.sh" ]] && source /usr/local/share/chruby/auto.sh
+
+#====================================
+# Virtualenv (wrapper)
 #====================================
 #export WORKON_HOME=$HOME/.virtualenvs
 #export VENV_PYTHON=$HOME/.virtualenvs/venv/bin/python3
@@ -43,7 +50,6 @@ export PATH=$PATH:$HOME/bin
 # - can't get it to run without installing as root
 # - or running it under virtualenv.
 # - then my shell shits the bed when i switch virtualenv's
-
 
 #====================================
 # cuda
