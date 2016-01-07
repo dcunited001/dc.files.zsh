@@ -58,6 +58,12 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
 export CUDA_HOME=/usr/local/cuda
 
 #====================================
+# node
+#====================================
+export PATH="$PATH:$HOME/npm/bin"
+export NODE_PATH="$NODE_PATH:$HOME/npm/lib/node_modules"
+
+#====================================
 # misc
 #====================================
 alias em="emacs -nw"
