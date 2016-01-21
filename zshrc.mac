@@ -1,5 +1,4 @@
 #!/bin/zsh
-
 export OS_TYPE=mac
 export DOTFILES=$HOME/.files
 
@@ -48,12 +47,12 @@ fi
 # powerline (zsh)
 #====================================
 # TODO: init script to automatically link ~/.config/powerline to ~/.files/powerline
-export POWERLINE_PYTHON_VERSION=3.5
+#export POWERLINE_PYTHON_VERSION=3.5
 
 # difference b/w site-packages & dist-packages?
 # - is that correct behavior for brew to setup pip to install to site-packages?
-export SITE_PACKAGES=/usr/local/lib/python$POWERLINE_PYTHON_VERSION/site-packages
-. $SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh
+#export SITE_PACKAGES=/usr/local/lib/python$POWERLINE_PYTHON_VERSION/site-packages
+#. $SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh
 
 #====================================
 # android sdk
