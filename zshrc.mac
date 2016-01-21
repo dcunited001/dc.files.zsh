@@ -59,6 +59,7 @@ export SITE_PACKAGES=/usr/local/lib/python$POWERLINE_PYTHON_VERSION/site-package
 # android sdk
 #====================================
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH="$PATH:$ANDROID_SDK_ROOT"
 
 #====================================
 # node/npm
