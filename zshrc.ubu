@@ -22,8 +22,16 @@ export PATH=$PATH:$HOME/bin
 #====================================
 # Virtualenv (wrapper)
 #====================================
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev/python
+
+
+source /usr/local/bin/virtualenvwrapper.sh
+
+
+
 #export WORKON_HOME=$HOME/.virtualenvs
-#export VENV_PYTHON=$HOME/.virtualenvs/venv/bin/python3
+#export VENV_PYTHON=$HOME/.virtualenvs/venv/bin/python
 #export VENV_BIN=$HOME/.virtualenvs/venv/bin
 #export VENV_LIB=$HOME/.virtualenvs/venv/lib
 #export VIRTUALENVWRAPPER_PYTHON=$VENV_PYTHON
