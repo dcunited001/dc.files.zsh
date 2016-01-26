@@ -33,35 +33,6 @@ fi
 
 #export PIP_RESPECT_VIRTUALENV= ??
 
-
-#export WORKON_HOME=$HOME/.virtualenvs
-#export VENV_PYTHON=$HOME/.virtualenvs/venv/bin/python
-#export VENV_BIN=$HOME/.virtualenvs/venv/bin
-#export VENV_LIB=$HOME/.virtualenvs/venv/lib
-#export VIRTUALENVWRAPPER_PYTHON=$VENV_PYTHON
-#export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-#export PIP_VIRTUALENV_BASE=$WORKON_HOME
-#if [[ -r $VENV_BIN/virtualenvwrapper.sh ]]; then
-#    source $VENV_BIN/virtualenvwrapper.sh
-#else
-#    echo "WARNING: Can't find virtualenvwrapper.sh"
-#fi
-
-#====================================
-# powerline (zsh)
-#====================================
-#workon venv # i think i'm "doing it wrong"
-#source ~/.virtualenv/venv/activate # yep, either way, i'm doing it wrong
-
-#export XDG_CONFIG_HOME=$HOME/.config
-#export SITE_PACKAGES=$VENV_LIB/python3.4/site-packages
-#. $SITE_PACKAGES/powerline/bindings/zsh/powerline.zsh
-
-# just disabling powerline right now.
-# - can't get it to run without installing as root
-# - or running it under virtualenv.
-# - then my shell shits the bed when i switch virtualenv's
-
 #====================================
 # cuda
 #====================================
