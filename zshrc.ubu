@@ -36,6 +36,12 @@ fi
 #export PIP_RESPECT_VIRTUALENV= ??
 
 #====================================
+# node
+#====================================
+
+export PATH=$PATH:$HOME/local/bin
+
+#====================================
 # android
 #====================================
 export ANDROID_SDK_ROOT=$HOME/Android/sdk
