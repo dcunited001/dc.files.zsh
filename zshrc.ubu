@@ -13,11 +13,13 @@ export PATH=$PATH:$HOME/bin
 [[ -e "$DOTFILES/zsh/zshrc" ]] && source $DOTFILES/zsh/zshrc
 
 #====================================
-# chruby
+# ruby
 #====================================
 
 [[ -e "/usr/local/share/chruby/chruby.sh" ]] && source /usr/local/share/chruby/chruby.sh
 [[ -e "/usr/local/share/chruby/auto.sh" ]] && source /usr/local/share/chruby/auto.sh
+
+export PATH=$PATH:$HOME/bin/Rubymine/bin
 
 #====================================
 # Virtualenv (wrapper)
@@ -34,7 +36,7 @@ fi
 #export PIP_RESPECT_VIRTUALENV= ??
 
 #====================================
-# cuda
+# android
 #====================================
 export ANDROID_SDK_ROOT=$HOME/Android/sdk
 export PATH="$PATH:$HOME/android-studio/bin"
