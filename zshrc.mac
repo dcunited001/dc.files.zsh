@@ -63,7 +63,8 @@ export PATH="$PATH:$ANDROID_SDK_ROOT"
 #====================================
 # node/npm
 #====================================
-export NPM_GLOBAL=/usr/local/share/npm/bin
+export NPM_GLOBAL=$HOME/local/bin/npm
+export PATH=$PATH:$HOME/local/bin
 
 #====================================
 # vagrant
@@ -89,4 +90,11 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 # gmake and some compilation tools may override standard osx build tool binaries
 # http://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
+
+#====================================
+# chruby
+#====================================
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CONFIG_DATA=$HOME/.share
 
