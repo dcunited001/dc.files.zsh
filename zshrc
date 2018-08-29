@@ -4,6 +4,13 @@
 plugins=(git rails brew gem rbates lein vagrant)
 source $HOME/.zsh/omz
 
+export DF=$DOTFILES
+export DFA=$DF/alias
+export DFZ=$DF/zsh
+export DFE=$DF/emacs
+export DFV=$DF/vim
+export DFK=$DF/kbd
+
 [[ -s "$HOME/.zsh/alias" ]] && source $HOME/.zsh/alias
 [[ -s "$HOME/.zsh/func" ]] && source $HOME/.zsh/func
 [[ -s "$HOME/.zsh/bindkeys" ]] && source $HOME/.zsh/bindkeys

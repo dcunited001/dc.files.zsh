@@ -7,7 +7,8 @@ export EDITOR=vim
 export DEFAULT_USER="dc"
 
 #switch to gnu-getopt
-export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"
+# ughhh.. no don't run ruby dependent on 'debug' in the zshrc
+#export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"
 
 #load common zsh
 [[ -e "$DOTFILES/zsh/zshrc" ]] && source $DOTFILES/zsh/zshrc
@@ -21,7 +22,7 @@ export PATH=$PATH:$HOME/dev/src/smlnj/bin
 #====================================
 # python
 #====================================
-export THE_PYTHON=/usr/local/bin/python3
+export THE_PYTHON=/usr/local/bin/python2
 
 # - this mysterious location is for 2.7 and not 3.5 =/
 # - and doesn't appear to be very important.  i wonder what it does...
@@ -34,6 +35,7 @@ export THE_PYTHON=/usr/local/bin/python3
 #          or 2) notate how to install (refer to http://te.xel.io/ and find the powerline blog)
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=$THE_PYTHON
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
@@ -63,7 +65,12 @@ export PATH="$PATH:$ANDROID_SDK_ROOT"
 #====================================
 # node/npm
 #====================================
-export NPM_GLOBAL=$HOME/local/bin/npm
+export PATH=$PATH:$HOME/node/bin
+export NPM_GLOBAL=$PATH:$HOME/node/bin/npm
+
+#====================================
+# ~/local/bin
+#====================================
 export PATH=$PATH:$HOME/local/bin
 
 #====================================
@@ -75,18 +82,33 @@ PATH=$VAGRANT_PATH:$PATH:$NPM_GLOBAL:$ANDROID_SDK_ROOT/platform-tools
 #====================================
 # java
 #====================================
-export JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+# export JAVA_HOME="#(/usr/libexec/java_home -v 10.1)"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
 
-# jenv
+# jenv (n/a)
 export PATH="$HOME/.jenv/bin:$PATH"
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+
+# maven
+export M3_HOME="$HOME/src/apache-maven-3.5.3"
+
+# gradle
+PATH=$PATH:$HOME/local/gradle-4.8.1/bin
+
+#====================================
+# rbenv
+#====================================
+
+#export PATH=$HOME/.rbenv/shims:$PATH
 
 #====================================
 # chruby
 #====================================
 
-[[ -e "/usr/local/share/chruby/chruby.sh" ]] && source /usr/local/share/chruby/chruby.sh
-[[ -e "/usr/local/share/chruby/auto.sh" ]] && source /usr/local/share/chruby/auto.sh
+# NOTE: using rbenv (8/2018)
+#[[ -e "/usr/local/share/chruby/chruby.sh" ]] && source /usr/local/share/chruby/chruby.sh
+#[[ -e "/usr/local/share/chruby/auto.sh" ]] && source /usr/local/share/chruby/auto.sh
 
 # gmake and some compilation tools may override standard osx build tool binaries
 # http://www.topbug.net/blog/2013/04/14/install-and-use-gnu-command-line-tools-in-mac-os-x/
@@ -98,3 +120,18 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CONFIG_DATA=$HOME/.share
 
+#====================================
+# ocaml (for hyperkit)
+#====================================
+
+. $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+#====================================
+# google cloud
+#====================================
+
+# Google Cloud SDK.
+if [ -f '/Users/dc/local/bin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/dc/local/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# shell command completion for gcloud.
+if [ -f '/Users/dc/local/bin/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/dc/local/bin/google-cloud-sdk/completion.zsh.inc'; fi
