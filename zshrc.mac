@@ -18,34 +18,12 @@ path+=$HOME/bin
 export PATH
 
 # VS Code
-path+="Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
+path+="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
 
 #====================================
 # python
 #====================================
-export THE_PYTHON=/usr/local/bin/python2
-
-# - this mysterious location is for 2.7 and not 3.5 =/
-# - and doesn't appear to be very important.  i wonder what it does...
-# PATH=${PATH}:/usr/local/share/python
-
-#====================================
-# virtualenv
-#====================================
-#TODO: either 1) only execute if virtualenv exists
-#          or 2) notate how to install (refer to http://te.xel.io/ and find the powerline blog)
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=$THE_PYTHON
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
-if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-else
-    echo "WARNING: Can't find virtualenvwrapper.sh"
-fi
+# no setup - use python3 -m venv ./new_py_env
 
 #====================================
 # powerline (zsh)
