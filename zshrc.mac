@@ -27,9 +27,10 @@ osx
 python
 ruby
 lukechilds/zsh-better-npm-completion
-zdarma/fast-syntax-highlighting
+zdharma/fast-syntax-highlighting
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
+eventi/noreallyjustfuckingstopalready
 EOBUNDLES
 
 #command-not-found (only for linux?)
