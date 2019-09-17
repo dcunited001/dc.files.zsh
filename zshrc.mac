@@ -10,6 +10,8 @@ export DEFAULT_USER="dc"
 # ughhh.. no don't run ruby dependent on 'debug' in the zshrc
 #export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"
 
+export CC=gcc
+
 #====================================
 # antigen
 #====================================
@@ -22,7 +24,6 @@ git-extras
 pip
 lein
 brew
-gradle
 osx
 python
 ruby
@@ -93,7 +94,10 @@ path=($path $VAGRANT_PATH $NPM_ROOT $ANDROID_SDK_ROOT/platform-tools)
 # java
 #====================================
 # export JAVA_HOME="#(/usr/libexec/java_home -v 10.1)"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home
+export JAVA_VERSION=1.8
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home
+
+if [ -x '/usr/libexec/java_home' ]; then export JAVA_HOME="#(/usr/libexec/java_home -v $JAVA_VERSION)"; else echo "Warning: /usr/libexec/java_home not found"; fi
 
 # jenv (n/a)
 path=($HOME/.jenv/bin $path)

@@ -12,8 +12,8 @@ export DFK=$DF/kbd
 
 [[ -s "$HOME/.zsh/alias" ]] && source $HOME/.zsh/alias
 [[ -s "$HOME/.zsh/func" ]] && source $HOME/.zsh/func
-[[ -s "$HOME/.zsh/bindkeys" ]] && source $HOME/.zsh/bindkeys
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+[[ -s $HOME/.zsh/bindkeys ]] && source $HOME/.zsh/bindkeys
+#[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 
 #====================================
